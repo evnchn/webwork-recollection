@@ -32,7 +32,7 @@ for line in import_string.splitlines():
                 print("Failed to install {}".format(package_name))
 ### DONE
 
-target_string = b'Use the fact given above to evaluate the integral' ### EDIT THIS!
+target_string = b'Try substitution with' ### EDIT THIS!
 
 def clear_console():
     os.system('cls' if os.name == 'nt' else 'clear') # https://stackoverflow.com/a/2084628
@@ -54,7 +54,7 @@ while not file_list:
     print("3. Place said folder into 'recollection' folder which has been generated for you")
     input()
 
-print("Looking for", strtarget_string)
+print("Looking for", target_string)
 for file_path in tqdm(file_list):
     try:
         with open(file_path, 'rb', 0) as file, mmap.mmap(file.fileno(), 0, access=mmap.ACCESS_READ) as s: 
